@@ -2,14 +2,19 @@ import React from 'react'
 import style from '../../style';
 
 const LargeScreens: React.FC = () => {
+  // Destructuring Style
   const { width, baseText } = style;
+
   return (
+    // Parent container
     <div className={`${width} flex-col hidden md:flex`}>
         <div className="flex w-full">
           <div className="w-1/2">
+            {/* Heading */}
             <h2 className="text-[48px] text-blue font-[600] tracking-[-0.05em] leading-[1.1em] mb-5">
               Limitations of BMI
             </h2>
+            {/* Paragraph */}
             <p className={` ${baseText} text-grey md:w-[535px]`}>
               Although BMI is often a practical indicator of healthy weight, it
               is not suited for every person. Specific groups should carefully
@@ -18,9 +23,10 @@ const LargeScreens: React.FC = () => {
             </p>
           </div>
           <div className="w-1/2 flex justify-center">
+            {/* Gender container */}
             <div className="p-6 rounded-[10px] shadow">
               <div className="flex gap-3 mb-3">
-                <img src="/images/icon-gender.svg" />
+                <img src="/images/icon-gender.svg" alt='gender icon' />
                 <h4 className="font-[600] text-[24px] text-blue">Gender</h4>
               </div>
               <p className={` ${baseText} text-grey w-[325px]`}>
@@ -34,9 +40,10 @@ const LargeScreens: React.FC = () => {
         <div className="flex gap-14 justify-end mb-10">
           <img src="/images/pattern-curved-line-right.svg" />
           <div className="flex gap-6 mt-10 ">
+            {/* Age container */}
             <div className="shadow p-6 rounded-[10px] z-[15]">
               <div className="flex gap-3 mb-3">
-                <img src="/images/icon-age.svg" />
+                <img src="/images/icon-age.svg" alt='age icon' />
                 <h4 className="font-[600] text-[24px] text-blue">Age</h4>
               </div>
               <p className={` ${baseText} text-grey w-[325px]`}>
@@ -44,9 +51,10 @@ const LargeScreens: React.FC = () => {
                 cause BMI to underestimate body fat content.
               </p>
             </div>
+            {/* Muscle container */}
             <div className="shadow p-6 rounded-[10px] z-[15]">
               <div className="flex gap-3 mb-3">
-                <img src="/images/icon-muscle.svg" />
+                <img src="/images/icon-muscle.svg" alt='muscle icon' />
                 <h4 className="font-[600] text-[24px] text-blue">Muscle</h4>
               </div>
               <p className={` ${baseText} text-grey w-[325px]`}>
@@ -57,9 +65,10 @@ const LargeScreens: React.FC = () => {
           </div>
         </div>
         <div className="flex gap-6 justify-center ">
+          {/* Pregnancy container */}
           <div className="shadow p-6 rounded-[10px] z-[15]">
             <div className="flex gap-3 mb-3">
-              <img src="/images/icon-pregnancy.svg" />
+              <img src="/images/icon-pregnancy.svg" alt='pregnancy icon'/>
               <h4 className="font-[600] text-[24px] text-blue">Pregnancy</h4>
             </div>
             <p className={` ${baseText} text-grey w-[325px]`}>
@@ -68,9 +77,10 @@ const LargeScreens: React.FC = () => {
               minimise health risks for both mother and child.
             </p>
           </div>
+          {/* Race container */}
           <div className="shadow p-6 rounded-[10px] z-[15]">
             <div className="flex gap-3 mb-3">
-              <img src="/images/icon-race.svg" />
+              <img src="/images/icon-race.svg" alt='race icon'/>
               <h4 className="font-[600] text-[24px] text-blue">Race</h4>
             </div>
             <p className={` ${baseText} text-grey w-[325px]`}>

@@ -2,13 +2,18 @@ import React from 'react'
 import style from '../../style';
 
 const SmallerScreens: React.FC = () => {
+  // Destructuring Style
   const { baseText } = style;
+
   return (
+    // Parent container
     <div className="flex flex-col md:hidden px-4 xs:px-6">
         <div className="w-full mb-10 flex flex-col items-center">
+            {/* Heading */}
           <h2 className="text-[36px] ss:text-[40px] text-blue font-[600] leading-[1.1em] mb-8">
             Limitations of BMI
           </h2>
+            {/* Paragraph */}
           <p className={` ${baseText} text-grey text-center`}>
             Although BMI is often a practical indicator of healthy weight, it is
             not suited for every person. Specific groups should carefully

@@ -3,11 +3,14 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 
 const Result: React.FC = () => {
+  // Local state to hold min and max healthy weight
   const [minWeight, setMinWeight] = useState<number>(0);
   const [maxWeight, setMaxWeight] = useState<number>(0);
 
+  // Destructuring global state
   const { bmi, system, height } = useSelector((state: RootState) => state.app);
 
+  // Function to determine the BMI result based on the calculated BMI value
   const result = (bmi: number) => {
     if (bmi < 18.5) {
       return "underweight";
@@ -21,12 +24,15 @@ const Result: React.FC = () => {
   };
 
   useEffect(() => {
+    // Calculate metric min and max healthy weight
     if (system === "metric") {
       const newMinWeight = 18.5 * (height * height);
       const newMaxWeight = 24.9 * (height * height);
       setMinWeight(newMinWeight);
       setMaxWeight(newMaxWeight);
-    } else {
+    } 
+    // Calculate Imperial min and max healthy weight
+    else {
       const newMinWeight = 18.5 * (height * height) * 2.20462;
       const newMaxWeight = 24.9 * (height * height) * 2.20462;
       setMinWeight(newMinWeight);
@@ -35,7 +41,9 @@ const Result: React.FC = () => {
   }, [system, height]);
 
   return (
+    // Parent Container
     <div className="p-6 h-auto s:h-[110px] bg-skyBlue rounded-[10px] ss:rounded-r-full flex flex-col justify-center">
+      {/* Welcome and information container */}
       {!bmi ? (
         <div>
           <h2 className="text-[24px] font-[600] text-white mb-1">Welcome!</h2>
@@ -44,6 +52,7 @@ const Result: React.FC = () => {
           </p>
         </div>
       ) : (
+        // Metric Result
         (system === "metric" && (
           <div className="w-full flex flex-col ss:flex-row gap-4 ss:justify-between text-white ss:items-center">
             <div className="flex flex-col">
@@ -60,6 +69,7 @@ const Result: React.FC = () => {
             </div>
           </div>
         )) ||
+        // Imperial result
         (system === "imperial" && (
           <div className="w-full flex flex-col ss:flex-row gap-4 ss:justify-between text-white ss:items-center">
             <div className="flex flex-col">
