@@ -4,7 +4,7 @@ import style from '../../style';
 const LargeScreens: React.FC = () => {
   const { width, baseText } = style;
   return (
-    <div className={`${width} flex-col mb-36 hidden md:flex`}>
+    <div className={`${width} flex-col hidden md:flex`}>
         <div className="flex w-full">
           <div className="w-1/2">
             <h2 className="text-[48px] text-blue font-[600] tracking-[-0.05em] leading-[1.1em] mb-5">

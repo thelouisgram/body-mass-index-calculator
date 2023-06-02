@@ -4,7 +4,7 @@ import SmallerScreens from "./Limitations/SmallerScreens";
 
 const Limitations: React.FC = () => {
   return (
-    <div>
+    <div className="mb-30">
       {/* Larger screens */}
       <LargeScreens />
       {/* Smaller Screens */}

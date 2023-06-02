@@ -4,7 +4,7 @@ import style from '../../style';
 const SmallerScreens: React.FC = () => {
   const { baseText } = style;
   return (
-    <div className="flex flex-col md:hidden px-4 xs:px-6 mb-30">
+    <div className="flex flex-col md:hidden px-4 xs:px-6">
         <div className="w-full mb-10 flex flex-col items-center">
           <h2 className="text-[36px] ss:text-[40px] text-blue font-[600] leading-[1.1em] mb-8">
             Limitations of BMI
