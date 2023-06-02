@@ -4,7 +4,7 @@ import BmiCalculator from './Hero/BmiCalculator'
 import HeroText from './Hero/HeroText'
 
 const Hero: React.FC = () => {
-  const {padding, width } = style
+  const { width } = style
 
   return (
     <div className='w-full md:mx-auto lg:w-[1300px] relative'>

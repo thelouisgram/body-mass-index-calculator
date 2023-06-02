@@ -5,7 +5,6 @@ import { setSystem } from "../../store/stateSlice";
 import Metric from "./forms/Metric";
 import Result from './Result'
 import Imperial from "./forms/Imperial";
-import style from "../../style";
 
 const BmiCalculator: React.FC = () => {
   const { system } = useSelector((state: RootState) => state.app);
