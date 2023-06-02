@@ -36,7 +36,7 @@ const BmiCalculator: React.FC = () => {
   return (
     // Parent Container
     <div
-      className={`ss:w-[525px] ss:mx-auto md:mx-0 h-auto bg-white rounded-[20px] shadow text-blue`}
+      className={`ss:w-[525px] ss:mx-auto md:mx-0 h-auto bg-white rounded-[20px] hero-shadow text-blue`}
     >
       <div className="p-4 xs:p-6 ss:p-7">
         {/* Form Legend */}
