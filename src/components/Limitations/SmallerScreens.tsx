@@ -16,8 +16,8 @@ const SmallerScreens: React.FC = () => {
             may not be beneficial to use.
           </p>
         </div>
-        <div className="flex flex-wrap w-full justify-center gap-4">
-          <div className="p-6 rounded-[10px] shadow-lg">
+        <div className="flex flex-wrap w-full justify-center gap-6">
+          <div className="p-6 rounded-[10px] shadow">
             <div className="flex gap-3 mb-3">
               <img src="/images/icon-gender.svg" />
               <h4 className="font-[600] text-[24px] text-blue">Gender</h4>
@@ -28,7 +28,7 @@ const SmallerScreens: React.FC = () => {
               when evaluating their BMI.
             </p>
           </div>
-        <div className="shadow-lg p-6 rounded-[10px] ">
+        <div className="shadow p-6 rounded-[10px] ">
           <div className="flex gap-3 mb-3">
             <img src="/images/icon-age.svg" />
             <h4 className="font-[600] text-[24px] text-blue">Age</h4>
@@ -38,7 +38,7 @@ const SmallerScreens: React.FC = () => {
             BMI to underestimate body fat content.
           </p>
         </div>
-        <div className="shadow-lg p-6 rounded-[10px] z-[15]">
+        <div className="shadow p-6 rounded-[10px] z-[15]">
           <div className="flex gap-3 mb-3">
             <img src="/images/icon-muscle.svg" />
             <h4 className="font-[600] text-[24px] text-blue">Muscle</h4>
@@ -48,7 +48,7 @@ const SmallerScreens: React.FC = () => {
             it doesn't differentiate muscle from fat.
           </p>
         </div>
-        <div className="shadow-lg p-6 rounded-[10px] z-[15]">
+        <div className="shadow p-6 rounded-[10px] z-[15]">
             <div className="flex gap-3 mb-3">
               <img src="/images/icon-pregnancy.svg" />
               <h4 className="font-[600] text-[24px] text-blue">Pregnancy</h4>
@@ -59,7 +59,7 @@ const SmallerScreens: React.FC = () => {
               minimise health risks for both mother and child.
             </p>
           </div>
-          <div className="shadow-lg p-6 rounded-[10px] z-[15]">
+          <div className="shadow p-6 rounded-[10px] z-[15]">
             <div className="flex gap-3 mb-3">
               <img src="/images/icon-race.svg" />
               <h4 className="font-[600] text-[24px] text-blue">Race</h4>
