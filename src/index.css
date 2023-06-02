@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-bg {
+    width: 978px;
+    height: 600px;
+    left: 24px;
+    top: -1px;
+    background: linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+    border-radius: 0px 0px 35px 35px;
+}
+
+.gradient-bg2 {
+  background-image: linear-gradient(to left, #f6fbff, white);
+  border-radius: 35px;
+}
+
+@media (max-width:1290px) {
+  .gradient-bg {
+    width: 100%;
+    height: 650px;
+    left: 0px;
+    top: -1px;
+    background: linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+    border-radius: 0px 0px 35px 35px;
+}
+  
+.gradient-bg2 {
+  background-image: linear-gradient(to left, #f6fbff, white);
+  border-radius: none;
+}
+}
+
+
+.result{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.shadow{
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+}
