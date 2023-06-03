@@ -8,9 +8,9 @@ const HeroText: React.FC = () => {
 
   return (
     // Parent Container
-    <div className={` text-blue h-auto mt-10 md:w-1/2 md:mt-20 flex flex-col items-center text-center md:items-start md:text-left `}>
+    <div className={` text-blue h-auto mt-10 md:w-1/2 md:mt-16 flex flex-col items-center text-center md:items-start md:text-left `}>
       {/* Heading */}
-      <h1 className="font-bold text-[48px] ss:text-[60px] leading-[1.1em] mb-6 md:mb-10 ">
+      <h1 className="font-bold text-[48px] ss:text-[56px] leading-[1.1em] mb-6 md:mb-10 ">
         Body Mass <br /> Index Calculator
       </h1>
       {/* Paragraph */}
