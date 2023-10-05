@@ -1,7 +1,6 @@
 import React from "react";
 import style from '../../style'
 
-
 const HeroText: React.FC = () => {
   // Destructuring Style
   const {baseText} = style
@@ -21,7 +20,7 @@ const HeroText: React.FC = () => {
         overall health and well-being.
       </p>
     </div>
-  );
+  ) 
 };
 
 export default HeroText;

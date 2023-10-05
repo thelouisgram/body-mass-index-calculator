@@ -1,14 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import stateReducer from './stateSlice'
+import { appType } from "./stateSlice";
 
 type RootState = {
-    app: AppState
-}
-
-type AppState = {
-    system: string,
-    bmi: number,
-    height: number
+    app: appType
 }
 
 const store = configureStore({

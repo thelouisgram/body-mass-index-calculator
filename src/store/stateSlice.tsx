@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface InitialState {
+export interface appType {
     system: string;
     bmi: number;
     height: number
 }
 
-const initialState: InitialState = {
+const initialState: appType = {
     system: 'metric',
     bmi: 0,
     height: 0,
