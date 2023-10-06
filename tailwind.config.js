@@ -17,7 +17,7 @@ export default {
         lightBlue: 'hsl(194,47%,90%)'
       },
        screens: {
-			xs: '375px',
+			xs: '300px',
 			ss: '620px',
 			sm: '768px',
 			md: '1200px',

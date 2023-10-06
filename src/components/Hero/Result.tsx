@@ -42,7 +42,7 @@ const Result: React.FC = () => {
 
   return (
     // Parent Container
-    <div className="p-6 h-auto s:h-[110px] bg-skyBlue rounded-[10px] ss:rounded-r-full flex flex-col justify-center">
+    <div className="p-6 h-auto ss:h-[110px] bg-skyBlue rounded-[10px] ss:rounded-r-full flex flex-col justify-center">
       {/* Welcome and information container */}
       {!bmi ? (
         <div>
@@ -54,7 +54,7 @@ const Result: React.FC = () => {
       ) : (
         // Metric Result
         (system === "metric" && (
-          <div className="w-full flex flex-col ss:flex-row gap-4 ss:justify-between text-white ss:items-center">
+          <div className="w-full flex h-full flex-col ss:flex-row gap-4 ss:justify-between text-white ss:items-center">
             <div className="flex flex-col">
               <h5 className="text-[14px] font-[500]">Your BMI is...</h5>
               <h2 className="text-[48px] leading-[1.1em] font-bold">
@@ -71,7 +71,7 @@ const Result: React.FC = () => {
         )) ||
         // Imperial result
         (system === "imperial" && (
-          <div className="w-full flex flex-col ss:flex-row gap-4 ss:justify-between text-white ss:items-center">
+          <div className="w-full flex h-full flex-col ss:flex-row gap-4 ss:justify-between text-white ss:items-center">
             <div className="flex flex-col">
               <h5 className="text-[14px] font-[500]">Your BMI is...</h5>
               <h2 className="text-[48px] leading-[1.1em] font-bold">

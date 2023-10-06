@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import stateReducer from './stateSlice'
-import { appType } from "./stateSlice";
+import { appType } from "../utils";
 
 type RootState = {
     app: appType

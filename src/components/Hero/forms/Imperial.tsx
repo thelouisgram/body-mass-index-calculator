@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { updateBmi, updateHeight } from "../../../store/stateSlice";
 import { useDispatch } from "react-redux";
+import { imperialState } from "../../../utils";
 
 const Imperial: React.FC = () => {
   const dispatch = useDispatch();
   // Local state to hold imperial data
-  const [imperialData, setImperialData] = useState<{
-    heightFeet: string;
-    heightInches: string;
-    weightPounds: string;
-  }>({
+  const [imperialData, setImperialData] = useState<imperialState>({
     heightFeet: "",
     heightInches: "",
     weightPounds: "",
@@ -24,27 +21,24 @@ const Imperial: React.FC = () => {
   };
 
   useEffect(() => {
-    // Condition to calculate bmi
-    if (
-      imperialData.heightFeet &&
-      imperialData.weightPounds
-    ) {
-      if (!imperialData.heightInches) {setImperialData({...imperialData, heightInches: "0"})}
-      const heightFeet = parseFloat(imperialData.heightFeet);
-      const heightInches = parseFloat(imperialData.heightInches);
-      const weightPounds = parseFloat(imperialData.weightPounds);
-      const heightInchesTotal = heightFeet * 12 + heightInches;
-      const heightMeters = heightInchesTotal * 0.0254;
-      const weightKilograms = weightPounds * 0.453592;
-      const bmiCalc: number = weightKilograms / (heightMeters * heightMeters);
-      // Update global state: bmi
-      dispatch(updateBmi(bmiCalc));
-      // update global state: height
-      dispatch(updateHeight(heightMeters));
-    } else {
+    if (!imperialData.heightFeet || !imperialData.weightPounds) {
       dispatch(updateBmi(0));
+      return;
     }
+
+    const heightFeet = parseFloat(imperialData.heightFeet);
+    const heightInches = parseFloat(imperialData.heightInches || "0");
+    const weightPounds = parseFloat(imperialData.weightPounds);
+
+    const heightInchesTotal = heightFeet * 12 + heightInches;
+    const heightMeters = heightInchesTotal * 0.0254;
+    const weightKilograms = weightPounds * 0.453592;
+    const bmiCalc = weightKilograms / (heightMeters * heightMeters);
+
+    dispatch(updateBmi(bmiCalc));
+    dispatch(updateHeight(heightMeters));
   }, [dispatch, imperialData]);
+
 
   return (
     // Parent container
@@ -55,7 +49,7 @@ const Imperial: React.FC = () => {
         <div className="flex flex-col ss:flex-row gap-5">
           {/* Feet container */}
           <div className="flex flex-col w-full ss:w-1/2">
-          {/* Feet label */}
+            {/* Feet label */}
             <label
               htmlFor="heightFeet"
               className="text-[14px] font-[600] text-grey mb-1"
@@ -129,7 +123,7 @@ const Imperial: React.FC = () => {
             </div>
           </div>
           {/* Empty div to hold half of the weight width */}
-          <div className="hidden ss:flex w-1/2"/>
+          <div className="hidden ss:flex w-1/2" />
         </div>
       </form>
     </div>
